@@ -1,5 +1,7 @@
 # Rotating Arrow Custom Symbol
 
+**Version:** 1.0.1
+
 ## Overview
 The sample code contained in this repository provides code to extend PI Vision with a new custom symbol.  
 The custom symbol is an arrow that rotates 360 degrees based on the data item selected from the search pane.  Note, you can multi-state this symbol to change the color based on the same data item or a different data item.
