@@ -24,8 +24,6 @@ The PI Vision Extensibility Samples in this repository are licensed under the [A
 
 ---
 
-For the main PI Vision Extensibility landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System/tree/master/docs/PI-Vision-Extensibility-Docs)
-
-For the main PI System Samples landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System)
-
+For the main PI Vision Extensibility landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System/tree/master/docs/PI-Vision-Extensibility-Docs)  
+For the main PI System Samples landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System)  
 For the main OSIsoft Samples landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples)
