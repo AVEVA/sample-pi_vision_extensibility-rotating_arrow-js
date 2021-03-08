@@ -1,5 +1,7 @@
 # Rotating Arrow Custom Symbol
 
+**Version:** 1.0.1
+
 ## Overview
 The sample code contained in this repository provides code to extend PI Vision with a new custom symbol.  
 The custom symbol is an arrow that rotates 360 degrees based on the data item selected from the search pane.  Note, you can multi-state this symbol to change the color based on the same data item or a different data item.
@@ -24,8 +26,6 @@ The PI Vision Extensibility Samples in this repository are licensed under the [A
 
 ---
 
-For the main PI Vision Extensibility landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System/tree/master/docs/PI-Vision-Extensibility-Docs)
-
-For the main PI System Samples landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System)
-
+For the main PI Vision Extensibility landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System/tree/master/docs/PI-Vision-Extensibility-Docs)  
+For the main PI System Samples landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System)  
 For the main OSIsoft Samples landing page on master [ReadMe](https://github.com/osisoft/OSI-Samples)
