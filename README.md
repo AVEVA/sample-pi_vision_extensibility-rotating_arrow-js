@@ -1,6 +1,6 @@
 # Rotating Arrow Custom Symbol
 
-**Version:** 1.0.1
+**Version:** 1.0.2
 
 ## Overview
 The sample code contained in this repository provides code to extend PI Vision with a new custom symbol.  

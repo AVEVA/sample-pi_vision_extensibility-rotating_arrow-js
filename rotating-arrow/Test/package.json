@@ -1,15 +1,25 @@
 {
+  "name": "pi_vision_extensibility-rotating_arrow-js",
+  "description": "Extend PI Vision with a new custom symbol",
+  "version": "1.0.2",
+  "private": true,
+  "author": "OSIsoft, LLC",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osisoft/sample-pi_vision_extensibility-rotating_arrow-js"
+  },
   "scripts": {
     "test": "karma start test\\karma.conf.js",
     "test-single-run": "karma start test\\karma.conf.js --single-run"
   },
   "dependencies": {},
   "devDependencies": {
-    "jasmine-core": "^3.6.0",
-    "karma": "^6.0.2",
+    "jasmine-core": "^3.8.0",
+    "karma": "^6.3.4",
     "karma-chrome-launcher": "^3.1.0",
     "karma-jasmine": "^4.0.1",
     "karma-spec-reporter": "0.0.32",
-    "phantomjs-prebuilt": "^2.1.14"
+    "phantomjs-prebuilt": "^2.1.16"
   }
 }
