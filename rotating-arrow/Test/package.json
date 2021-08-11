@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/osisoft/sample-pi_vision_extensibility-rotating_arrow-js"
+    "url": "https://github.com/osisoft/sample-pi_vision_extensibility-rotating_arrow-js.git"
   },
   "scripts": {
     "test": "karma start test\\karma.conf.js",
