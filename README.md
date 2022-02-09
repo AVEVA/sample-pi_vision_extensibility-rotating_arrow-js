@@ -16,7 +16,7 @@ To request a new sample, if there is a feature or capability you would like demo
 
 If your support question or issue is related to an AVEVA product (error message, problem with product configuration, etc.), please open a case with AVEVA Tech Support through the [AVEVA Customer Portal](https://my.osisoft.com/).
 
-If your support question or issue is related to a non-modified sample (or test) or sample documentation; please email [samples@aveva.com](mailto:samples@aveva.com). 
+If your support question or issue is related to a non-modified sample (or test) or sample documentation; please email [samples@osisoft.com](mailto:samples@osisoft.com). 
 
 ### License
 
