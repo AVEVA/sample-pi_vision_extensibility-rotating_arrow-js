@@ -1,5 +1,9 @@
 # Version History
 
+## 1.0.5 / 2023-10-13
+
+- Migrate Pipelines
+
 ## 1.0.4 / 2023-04-13
 
 - Updated feedback link

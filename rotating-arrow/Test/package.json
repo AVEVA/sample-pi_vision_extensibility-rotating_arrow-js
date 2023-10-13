@@ -1,6 +1,5 @@
 {
-  "scripts": {
-    "test": "karma start test\\karma.conf.js",
+  "scrip"1.0.5",
     "test-single-run": "karma start test\\karma.conf.js --single-run"
   },
   "dependencies": {},
