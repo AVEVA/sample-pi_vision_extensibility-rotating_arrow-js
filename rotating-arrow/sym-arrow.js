@@ -35,11 +35,11 @@
             };
         },
         StateVariables: ['MultistateColor'],
-        configOptions: function () {
-            return [{
+        configOptions: function (context, clickedElement, monitorOptions, layoutOptions) {
+            monitorOptions.push({
                 title: 'Format Wind Arrow',
                 mode: 'formatWindArrow'
-            }];
+            });
         }
     };
 
