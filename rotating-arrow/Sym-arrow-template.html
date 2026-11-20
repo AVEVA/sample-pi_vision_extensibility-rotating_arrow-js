@@ -3,8 +3,9 @@
     <div ng-show="config.ShowLabel">
         <span class="heading-label" ng-style="{color:config.LabelColor}">{{Label}}</span>
     </div>
-    <div ng-show="config.ShowValue">
-        <span class="heading-label" ng-style="{color:config.ValueColor}">{{Value}}&nbsp;{{Units}}</span>
+    <div ng-show="config.ShowValue || showStatusFlag">
+        <span class="heading-label" ng-show="config.ShowValue" ng-style="{color:config.ValueColor}">{{Value}}&nbsp;{{Units}}</span>
+        <span class="heading-label" ng-show="showStatusFlag" ng-style="{color:config.ValueColor}">{{StatusFlags}}</span>
     </div>
     <div ng-show="config.ShowTimestamp">
         <span class="heading-label" ng-style="{color:config.LabelColor}">{{Timestamp}}</span>

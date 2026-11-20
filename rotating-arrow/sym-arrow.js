@@ -50,6 +50,8 @@
         scope.Width;
         scope.Height;
         scope.Label = '';
+        scope.StatusFlags = '';
+        scope.showStatusFlag = false;
 
         // runtimeData is passed to config.html and can be changed in code without causing additional undo levels
         // The labelOptions are used to populate the label dropdown listbox on the config.html display
@@ -77,6 +79,14 @@
             }
             scope.Value = newData.Value;
             scope.Timestamp = newData.Time;
+
+            // Re-check on every update; a user setting change arrives as a data refresh
+            var previousFlags = scope.StatusFlags;
+            scope.StatusFlags = getStatusFlags(newData);
+            if (isStatusFlagShown() !== scope.showStatusFlag || scope.StatusFlags !== previousFlags) {
+                showLabels(scope.Width, scope.Height);
+                setSVGPadding();
+            }
 
             // Rotate the arrow
             var svgArrow = elem.find('.svg-arrow')[0];
@@ -109,6 +119,8 @@
             var labelWidth = 0;
             var defaultLabelHeight = 50;
             var compareWidth = 0;
+            scope.showStatusFlag = isStatusFlagShown();
+            var statusFlagWidth = scope.showStatusFlag ? textWidth(' ' + scope.StatusFlags) : 0;
 
             scope.Width = width;
             scope.Height = height;
@@ -124,8 +136,11 @@
             }
             if (scope.config.ShowValue) {
                 labelsDisplayed++;
-                compareWidth = textWidth(scope.Units === undefined ? scope.Value : scope.Value.concat(scope.Units));
+                compareWidth = textWidth(scope.Units === undefined ? scope.Value : scope.Value.concat(scope.Units)) + statusFlagWidth;
                 labelWidth = labelWidth > compareWidth ? labelWidth : compareWidth;
+            } else if (statusFlagWidth) {
+                labelsDisplayed++;
+                labelWidth = labelWidth > statusFlagWidth ? labelWidth : statusFlagWidth;
             }
 
             if (width < labelWidth || height < labelsDisplayed * defaultLabelHeight) {
@@ -148,7 +163,7 @@
                 if (scope.config.ShowTimestamp) {
                     labelsDisplayed++;
                 }
-                if (scope.config.ShowValue) {
+                if (scope.config.ShowValue || scope.showStatusFlag) {
                     labelsDisplayed++;
                 }
             }
@@ -174,6 +189,25 @@
         // Calculate the text required width 
         function textWidth(textValue) {
             return textValue ? textValue.length * 7.3 : 0;
+        }
+
+        // Only one flag is shown; precedence is Questionable > Substituted > Annotated
+        function getStatusFlags(data) {
+            if (data.Questionable) {
+                return '(q)';
+            }
+            if (data.Substituted) {
+                return '(s)';
+            }
+            if (data.Annotated) {
+                return '(a)';
+            }
+            return '';
+        }
+
+        function isStatusFlagShown() {
+            // userSettings is absent on PI Vision versions that predate it
+            return !!(scope.userSettings && scope.userSettings.ShowStatusFlags && scope.StatusFlags);
         }
 
         // Update label text if provided by data update
